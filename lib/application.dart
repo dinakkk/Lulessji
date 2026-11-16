@@ -179,7 +179,7 @@ class ApplicationState extends ConsumerState<Application> {
           supportedLocales: AppLocalizations.delegate.supportedLocales,
           themeMode: ThemeMode.dark,
           theme: watchAppTheme(ref, Brightness.light),
-          darkTheme: watchAppTheme(ref, Brightness.dark),
+          darkTheme: IgalltaTheme.buildDarkTheme(),
           textScale: textScale.enable ? textScale.scale : null,
           minTextScale: minTextScale,
           maxTextScale: maxTextScale,
@@ -210,4 +210,5 @@ class ApplicationState extends ConsumerState<Application> {
     super.dispose();
   }
 }
+
 
